@@ -1,0 +1,188 @@
+@import url(//db.onlinewebfonts.com/c/a638be55afb1ed29ceb7ea7e288c2139?family=GT+Flexa);
+@font-face {
+  font-family: "GT Flexa";
+  src: url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.eot");
+  src: url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.woff") format("woff"), url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.svg#GT Flexa") format("svg");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "GT Flexa";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.grid-layout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  grid-auto-rows: minmax(300px, auto);
+  grid-auto-flow: dense;
+  padding: 10px;
+  background-color: #021E73;
+}
+
+.grid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  font-size: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #423DD9;
+  height: 100%;
+  color: #929796;
+  border-radius: 5px;
+}
+
+.grid-item h2 {
+  color: #F2E52E;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: -12px;
+  font-size: 4.2rem;
+}
+
+.grid-item h3 {
+  color: #E9D249;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.grid-item p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #cabc69;
+}
+
+.span-2 {
+  -ms-grid-column-span: 2;
+      grid-column-end: span 2;
+  -ms-grid-row-span: 2;
+      grid-row-end: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+@media (max-width: 646px) {
+  .grid-layout {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .span-2 {
+    grid-column-end: auto;
+    grid-row-end: auto;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.image-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.63);
+  box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.63);
+}
+
+.album-disc {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.album-disc a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+}
+
+.intro-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #021E73;
+  display: -ms-grid;
+  display: grid;
+  padding: 40px;
+  place-content: center;
+}
+
+.intro-wrapper h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #F2E52E;
+  letter-spacing: 1px;
+  font-size: max(11vw, 5rem);
+}
+
+@media (max-width: 556px) {
+  .intro-wrapper h3, .intro-wrapper p {
+    line-height: 94%;
+  }
+}
+
+.intro-wrapper p {
+  font-size: max(5vw, 3rem);
+  color: #E9D249;
+  letter-spacing: 2px;
+  line-height: 45px;
+}
+
+.year {
+  color: #021E73;
+  text-shadow: 1px 0 0 #F2E52E, 0 1px 0 #F2E52E, -1px 0 0 #F2E52E, 0 -1px 0 #F2E52E;
+}
+
+.b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+}
+
+.b-lazy.b-loaded {
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */
