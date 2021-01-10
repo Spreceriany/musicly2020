@@ -73,6 +73,9 @@ $album-color:#cabc69;
 .span-2 {
   grid-column-end: span 2;
   grid-row-end: span 2;
+  display: flex;
+    justify-content: center;
+    height: 100%;
 }
 
 @media (max-width: 646px){
