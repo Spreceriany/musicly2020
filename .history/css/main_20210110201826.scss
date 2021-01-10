@@ -1,7 +1,5 @@
-@font-face{
-  font-family: "Gt Flexa";
-  src: url("../css/GT\ Flexa\ Regular.ttf");
-}
+@import url(//db.onlinewebfonts.com/c/a638be55afb1ed29ceb7ea7e288c2139?family=GT+Flexa);
+@font-face {font-family: "GT Flexa"; src: url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.eot"); src: url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.woff") format("woff"), url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a638be55afb1ed29ceb7ea7e288c2139.svg#GT Flexa") format("svg"); }
 *{
   box-sizing: border-box;
   padding: 0;
@@ -149,7 +147,7 @@ position: relative;
     font-weight: bold;
     text-transform: uppercase;
     color: $primary-color;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-size: #{"max(11vw, 5rem)"};
   
   }
