@@ -1,0 +1,209 @@
+@font-face{
+  font-family: "Gt Flexa";
+  src: url("../css/GT\ Flexa\ Regular.ttf");
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: "GT Flexa";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+}
+
+$primary-color:#F2E52E;
+$background-color:#021E73;
+$secondbg-color:#423DD9;
+$descp-color:#E9D249;
+$album-color:#cabc69;
+
+
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  grid-auto-rows: minmax(300px, auto);
+  grid-auto-flow: dense;
+  padding: 10px;
+  background-color: $background-color;
+}
+
+.grid-item {
+  display:grid;
+ 
+  padding: 1rem;
+  font-size: 40px;
+  
+  
+  background-color: $secondbg-color;
+  height: 100%;
+ 
+  color: #929796;
+  border-radius: 5px;
+  
+  h2{
+    color:$primary-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: -12px;
+    font-size: 4.2rem;
+    
+  }
+
+  h3{
+    color: $descp-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+
+  p{
+    text-transform: uppercase;
+    letter-spacing:1px;
+    color: $album-color;
+  }
+ 
+}
+
+.span-2 {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+@media (max-width: 646px){
+
+  .grid-layout{
+
+    grid-template-columns: 1fr;
+    
+  }
+
+  .span-2{
+    grid-column-end: auto;
+    grid-row-end: auto;
+  }
+}
+
+img{
+  width: 100%;
+  height: auto;
+  
+}
+
+
+
+.image-container{
+  width: 100%;
+  img{
+    object-fit: cover;
+    -webkit-box-shadow: 7px 4px 8px 0px rgba(0,0,0,0.63); 
+box-shadow: 7px 4px 8px 0px rgba(0,0,0,0.63);
+  }
+}
+
+.album-disc{
+  width: 100%;
+position: relative;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  a{
+    align-self: center;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+
+    // h2::before{
+    //   content: '';
+    //   position: absolute;
+    //   width: 10px;
+    //   height: 10px;
+    //   background-color: $descp-color;
+    //   transform: skew(30deg);
+    //   transform: rotate(30px);
+    // }
+
+    
+  }
+}
+
+.intro-wrapper{
+  width: 100%;
+  min-height: 100vh;
+  background-color: $background-color;
+  display: grid;
+  z-index: 10;
+  padding: 40px;
+
+  place-content: center;
+  position:relative;
+  ::before{
+    content: "";
+    position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+     
+      width: 100%;
+      height: 100%;
+      opacity: 0.75;
+      background-image: url('../img/Sluchatka.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: -1;
+  }
+  @media only screen and(max-width: 996px){
+    ::before{
+      background-position: initial;
+    }
+  }
+  h3{
+   
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primary-color;
+    letter-spacing: 3px;
+    font-size: #{"max(11vw, 5rem)"};
+  
+  }
+  @media(max-width: 556px){
+    h3,p{
+      line-height: 94%;
+    }
+  }
+  p{
+    font-size: #{"max(5vw, 3rem)"};
+    color: $descp-color;
+    letter-spacing: 2px;
+    line-height: 45px;
+  }
+}
+
+
+
+.year{
+  color: $background-color;
+  text-shadow:1px 0 0 $primary-color,0 1px 0 $primary-color,-1px 0 0 $primary-color,0 -1px 0 $primary-color;
+}
+
+
+.b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
+     -moz-transition: opacity 500ms ease-in-out;
+       -o-transition: opacity 500ms ease-in-out;
+          transition: opacity 500ms ease-in-out;
+           max-width: 100%;
+             opacity: 0;
+             
+}
+.b-lazy.b-loaded {
+             opacity: 1;
+}
+
