@@ -33,6 +33,10 @@ body {
   display: grid;
   padding: 1rem;
   font-size: 40px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  justify-items: center;
   background-color: #423DD9;
   height: 100%;
   color: #929796;
@@ -86,6 +90,13 @@ img {
 
 .image-container {
   width: 100%;
+  display: table;
+}
+
+.image-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .image-container img {
@@ -116,6 +127,7 @@ img {
   transition: opacity .7s ease, -webkit-transform .7s ease;
   transition: opacity .7s ease, transform .7s ease;
   transition: opacity .7s ease, transform .7s ease, -webkit-transform .7s ease;
+  margin-top: 15px;
 }
 
 .album-disc a {
@@ -135,14 +147,14 @@ img {
   display: grid;
   z-index: 10;
   padding: 40px;
-  background-position: left;
+  background-position: 60% center;
   place-content: center;
   position: relative;
 }
 
 @media only screen and (max-width: 996px) {
   .intro-wrapper .intro-wrapper {
-    background-position: right center;
+    background-position: left;
   }
 }
 
@@ -176,8 +188,16 @@ img {
   background-image: url("../img/Sluchatka.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   z-index: -1;
   opacity: 0;
+}
+
+@media only screen and (max-width: 996px) {
+  .intro-wrapper .intro-bg {
+    background-position: left;
+  }
 }
 
 .year {
