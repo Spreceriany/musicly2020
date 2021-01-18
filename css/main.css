@@ -11,9 +11,10 @@
 }
 
 body {
-  font-family: "GT Flexa";
+  font-family: "GT Flexa", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-display: swap;
 }
 
 .grid-layout {
@@ -25,26 +26,29 @@ body {
   grid-auto-rows: minmax(300px, auto);
   grid-auto-flow: dense;
   padding: 10px;
-  background-color: #021E73;
+  background-color: #021e73;
 }
 
 .grid-item {
   display: -ms-grid;
   display: grid;
   padding: 1rem;
+  opacity: 0;
   font-size: 40px;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
   justify-items: center;
-  background-color: #423DD9;
+  background-color: #423dd9;
   height: 100%;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   color: #929796;
   border-radius: 5px;
 }
 
 .grid-item h2 {
-  color: #F2E52E;
+  color: #f2e52e;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: -12px;
@@ -52,7 +56,7 @@ body {
 }
 
 .grid-item h3 {
-  color: #E9D249;
+  color: #e9d249;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 2.2rem;
@@ -63,6 +67,19 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #cabc69;
+}
+
+.grid-item:hover .image-container img {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 5px 3px 30px 9px #000000;
+  box-shadow: 0px 14px 43px 6px #000000;
+}
+
+.grid-item:hover .album-disc {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0.8;
 }
 
 .span-2 {
@@ -104,10 +121,10 @@ img {
      object-fit: cover;
   -webkit-box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.63);
   box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.63);
-  -webkit-transition: -webkit-transform .7s ease, -webkit-box-shadow .7s ease;
-  transition: -webkit-transform .7s ease, -webkit-box-shadow .7s ease;
-  transition: transform .7s ease, box-shadow .7s ease;
-  transition: transform .7s ease, box-shadow .7s ease, -webkit-transform .7s ease, -webkit-box-shadow .7s ease;
+  -webkit-transition: -webkit-transform 0.7s ease, -webkit-box-shadow 0.7s ease;
+  transition: -webkit-transform 0.7s ease, -webkit-box-shadow 0.7s ease;
+  transition: transform 0.7s ease, box-shadow 0.7s ease;
+  transition: transform 0.7s ease, box-shadow 0.7s ease, -webkit-transform 0.7s ease, -webkit-box-shadow 0.7s ease;
 }
 
 .album-disc {
@@ -123,10 +140,10 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: opacity .7s ease, -webkit-transform .7s ease;
-  transition: opacity .7s ease, -webkit-transform .7s ease;
-  transition: opacity .7s ease, transform .7s ease;
-  transition: opacity .7s ease, transform .7s ease, -webkit-transform .7s ease;
+  -webkit-transition: opacity 0.7s ease, -webkit-transform 0.7s ease;
+  transition: opacity 0.7s ease, -webkit-transform 0.7s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease, -webkit-transform 0.7s ease;
   margin-top: 15px;
 }
 
@@ -142,7 +159,7 @@ img {
 .intro-wrapper {
   width: 100%;
   min-height: 100vh;
-  background-color: #021E73;
+  background-color: #021e73;
   display: -ms-grid;
   display: grid;
   z-index: 10;
@@ -162,20 +179,21 @@ img {
   opacity: 0;
   font-weight: 700;
   text-transform: uppercase;
-  color: #F2E52E;
+  color: #f2e52e;
   letter-spacing: 3px;
   font-size: max(11vw, 5rem);
 }
 
 @media (max-width: 556px) {
-  .intro-wrapper h3, .intro-wrapper p {
+  .intro-wrapper h3,
+  .intro-wrapper p {
     line-height: 94%;
   }
 }
 
 .intro-wrapper p {
   font-size: max(5vw, 3rem);
-  color: #E9D249;
+  color: #e9d249;
   letter-spacing: 2px;
   line-height: 45px;
   opacity: 0;
@@ -185,7 +203,7 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("../img/Sluchatka.png");
+  background-image: url("../img/sluchatka5.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -201,31 +219,7 @@ img {
 }
 
 .year {
-  color: #021E73;
-  text-shadow: 1px 0 0 #F2E52E, 0 1px 0 #F2E52E, -1px 0 0 #F2E52E, 0 -1px 0 #F2E52E;
-}
-
-.b-lazy {
-  -webkit-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
-  max-width: 100%;
-  opacity: 0;
-}
-
-.b-lazy.b-loaded {
-  opacity: 1;
-}
-
-.grid-item:hover .image-container img {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  -webkit-box-shadow: 5px 3px 30px 9px #000000;
-  box-shadow: 0px 14px 43px 6px #000000;
-}
-
-.grid-item:hover .album-disc {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  opacity: 0.8;
+  color: #021e73;
+  text-shadow: 1px 0 0 #f2e52e, 0 1px 0 #f2e52e, -1px 0 0 #f2e52e, 0 -1px 0 #f2e52e;
 }
 /*# sourceMappingURL=main.css.map */

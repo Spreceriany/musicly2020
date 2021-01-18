@@ -1,26 +1,24 @@
-@font-face{
+@font-face {
   font-family: "Gt Flexa";
   src: url("../css/GT\ Flexa\ Regular.ttf");
 }
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-body{
-  font-family: "GT Flexa";
+body {
+  font-family: "GT Flexa", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+  font-display: swap;
 }
 
-$primary-color:#F2E52E;
-$background-color:#021E73;
-$secondbg-color:#423DD9;
-$descp-color:#E9D249;
-$album-color:#cabc69;
-
-
+$primary-color: #f2e52e;
+$background-color: #021e73;
+$secondbg-color: #423dd9;
+$descp-color: #e9d249;
+$album-color: #cabc69;
 
 .grid-layout {
   display: grid;
@@ -33,28 +31,27 @@ $album-color:#cabc69;
 }
 
 .grid-item {
-  display:grid;
- 
+  display: grid;
   padding: 1rem;
+  opacity: 0;
   font-size: 40px;
   align-items: stretch;
   justify-items: center;
   background-color: $secondbg-color;
   height: 100%;
- 
+  transform: translateY(30px);
   color: #929796;
   border-radius: 5px;
-  
-  h2{
-    color:$primary-color;
+
+  h2 {
+    color: $primary-color;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: -12px;
     font-size: 4.2rem;
-    
   }
 
-  h3{
+  h3 {
     color: $descp-color;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -62,15 +59,24 @@ $album-color:#cabc69;
     font-weight: 700;
   }
 
-  p{
+  p {
     text-transform: uppercase;
-    letter-spacing:1px;
+    letter-spacing: 1px;
     color: $album-color;
   }
 
- 
-  
- 
+  &:hover {
+    .image-container img {
+      transform: scale(1.02);
+      -webkit-box-shadow: 5px 3px 30px 9px #000000;
+      box-shadow: 0px 14px 43px 6px #000000;
+    }
+
+    .album-disc {
+      transform: scale(0.9);
+      opacity: 0.8;
+    }
+  }
 }
 
 .span-2 {
@@ -78,64 +84,54 @@ $album-color:#cabc69;
   grid-row-end: span 2;
 }
 
-@media (max-width: 646px){
-
-  .grid-layout{
-
+@media (max-width: 646px) {
+  .grid-layout {
     grid-template-columns: 1fr;
-    
   }
 
-  .span-2{
+  .span-2 {
     grid-column-end: auto;
     grid-row-end: auto;
   }
 }
 
-img{
+img {
   width: 100%;
   height: auto;
-  
 }
 
-
-
-.image-container{
+.image-container {
   width: 100%;
   display: table;
-  a{
+  a {
     display: flex;
   }
- 
-  img{
+
+  img {
     object-fit: cover;
-    -webkit-box-shadow: 7px 4px 8px 0px rgba(0,0,0,0.63); 
-box-shadow: 7px 4px 8px 0px rgba(0,0,0,0.63);
-    transition: transform .7s ease, box-shadow .7s ease;
-   
+    -webkit-box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.63);
+    box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.63);
+    transition: transform 0.7s ease, box-shadow 0.7s ease;
   }
 }
 
-.album-disc{
+.album-disc {
   width: 100%;
-position: relative;
+  position: relative;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
-  transition: opacity .7s ease, transform .7s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
   margin-top: 15px;
-  a{
+  a {
     align-self: center;
     text-decoration: none;
     text-align: center;
     position: relative;
-
-
-    
   }
 }
 
-.intro-wrapper{
+.intro-wrapper {
   width: 100%;
   min-height: 100vh;
   background-color: $background-color;
@@ -144,27 +140,27 @@ position: relative;
   padding: 40px;
   background-position: 60% center;
   place-content: center;
-  position:relative;
-  @media only screen and(max-width: 996px){
-    .intro-wrapper{
-      background-position:left
+  position: relative;
+  @media only screen and(max-width: 996px) {
+    .intro-wrapper {
+      background-position: left;
     }
   }
-  h3{
-   opacity: 0;
+  h3 {
+    opacity: 0;
     font-weight: 700;
     text-transform: uppercase;
     color: $primary-color;
     letter-spacing: 3px;
     font-size: #{"max(11vw, 5rem)"};
-  
   }
-  @media(max-width: 556px){
-    h3,p{
+  @media (max-width: 556px) {
+    h3,
+    p {
       line-height: 94%;
     }
   }
-  p{
+  p {
     font-size: #{"max(5vw, 3rem)"};
     color: $descp-color;
     letter-spacing: 2px;
@@ -172,63 +168,29 @@ position: relative;
     opacity: 0;
   }
 
-  .intro-bg{
+  .intro-bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url('../img/Sluchatka.png');
+    background-image: url("../img/sluchatka5.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;;
+    background-position: center;
     background-attachment: fixed;
 
     z-index: -1;
     opacity: 0;
-   
-   
   }
 
-  @media only screen and(max-width: 996px){
-    .intro-bg{
-      background-position:left
+  @media only screen and(max-width: 996px) {
+    .intro-bg {
+      background-position: left;
     }
   }
 }
 
-
-
-.year{
+.year {
   color: $background-color;
-  text-shadow:1px 0 0 $primary-color,0 1px 0 $primary-color,-1px 0 0 $primary-color,0 -1px 0 $primary-color;
+  text-shadow: 1px 0 0 $primary-color, 0 1px 0 $primary-color,
+    -1px 0 0 $primary-color, 0 -1px 0 $primary-color;
 }
-
-
-.b-lazy {
-  -webkit-transition: opacity 500ms ease-in-out;
-     -moz-transition: opacity 500ms ease-in-out;
-       -o-transition: opacity 500ms ease-in-out;
-          transition: opacity 500ms ease-in-out;
-           max-width: 100%;
-             opacity: 0;
-             
-}
-.b-lazy.b-loaded {
-             opacity: 1;
-}
-
-
-
-.grid-item:hover{
-
-  .image-container img{
-    transform: scale(1.02);
-    -webkit-box-shadow: 5px 3px 30px 9px #000000; 
-    box-shadow: 0px 14px 43px 6px #000000;    
-  }
-
-  .album-disc{
-    transform: scale(0.9);
-    opacity: 0.8;
-  }
-}
-
