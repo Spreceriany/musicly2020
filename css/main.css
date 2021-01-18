@@ -15,6 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-display: swap;
+  scroll-behavior: smooth;
 }
 
 .grid-layout {
@@ -207,7 +208,6 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   z-index: -1;
   opacity: 0;
 }
