@@ -149,11 +149,12 @@ img {
   display: grid;
   z-index: 10;
   padding: 40px;
+  background-position: 60% center;
   place-content: center;
   position: relative;
   @media only screen and(max-width: 996px) {
     .intro-wrapper {
-      background-position: 5% center;
+      background-position: left;
     }
   }
   h3 {

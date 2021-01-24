@@ -1,3 +1,5 @@
+const timeline = gsap.timeline({ defaults: { duration: 1 } });
+gsap.registerPlugin(ScrollTrigger);
 
 if (window.innerWidth > 996) {
   VanillaTilt.init(document.querySelectorAll(".image-container"), {
@@ -13,10 +15,6 @@ if (window.innerWidth > 996) {
 //It also supports NodeList
 VanillaTilt.init(document.querySelectorAll(".image-container"));
 }
-
-const timeline = gsap.timeline({ defaults: { duration: 1 } });
-gsap.registerPlugin(ScrollTrigger);
-
 
 
 ScrollTrigger.batch(".grid-item", {
@@ -36,6 +34,3 @@ timeline
   .to("#intro-bg", { scale: 1, opacity: 1, duration: 1.5 })
   .to("#title", { opacity: 1 })
   .to("#title-desc", { opacity: 1 });
-
-
-

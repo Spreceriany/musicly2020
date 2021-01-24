@@ -1,4 +1,5 @@
 
+
 if (window.innerWidth > 996) {
   VanillaTilt.init(document.querySelectorAll(".image-container"), {
   max: 10,
@@ -11,7 +12,6 @@ if (window.innerWidth > 996) {
 });
 
 //It also supports NodeList
-VanillaTilt.init(document.querySelectorAll(".image-container"));
 }
 
 const timeline = gsap.timeline({ defaults: { duration: 1 } });

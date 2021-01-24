@@ -1,4 +1,3 @@
-
 if (window.innerWidth > 996) {
   VanillaTilt.init(document.querySelectorAll(".image-container"), {
   max: 10,
@@ -36,6 +35,3 @@ timeline
   .to("#intro-bg", { scale: 1, opacity: 1, duration: 1.5 })
   .to("#title", { opacity: 1 })
   .to("#title-desc", { opacity: 1 });
-
-
-

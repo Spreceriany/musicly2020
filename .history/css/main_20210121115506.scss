@@ -109,12 +109,10 @@ img {
 
 .image-container {
   width: 100%;
-  display: flex;
+  display: table;
 
   a {
     display:flex;
-    width: 100%;
-
     }
 
   img {
@@ -130,7 +128,6 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   transition: opacity 0.7s ease, transform 0.7s ease;
   margin-top: 15px;
@@ -149,11 +146,12 @@ img {
   display: grid;
   z-index: 10;
   padding: 40px;
+  background-position: 60% center;
   place-content: center;
   position: relative;
   @media only screen and(max-width: 996px) {
     .intro-wrapper {
-      background-position: 5% center;
+      background-position: left;
     }
   }
   h3 {

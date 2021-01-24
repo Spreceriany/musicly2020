@@ -1,4 +1,5 @@
 
+ var scroll = new LocomotiveScroll();
 if (window.innerWidth > 996) {
   VanillaTilt.init(document.querySelectorAll(".image-container"), {
   max: 10,

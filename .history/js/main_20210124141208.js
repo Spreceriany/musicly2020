@@ -11,8 +11,6 @@ if (window.innerWidth > 996) {
 });
 
 //It also supports NodeList
-VanillaTilt.init(document.querySelectorAll(".image-container"));
-}
 
 const timeline = gsap.timeline({ defaults: { duration: 1 } });
 gsap.registerPlugin(ScrollTrigger);
