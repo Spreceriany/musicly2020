@@ -23,9 +23,9 @@ $album-color: #cabc69;
 
 .grid-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;
-  grid-auto-rows: minmax(250px, auto);
+  grid-auto-rows: minmax(300px, auto);
   grid-auto-flow: dense;
   padding: 10px;
   background-color: $background-color;
@@ -66,18 +66,31 @@ $album-color: #cabc69;
     color: $album-color;
   }
 
-  &:hover {
+   
     .image-container img {
-      transform: scale(1.02);
+
+      &:hover{
+         transform: scale(1.02);
       -webkit-box-shadow: 5px 3px 30px 9px #000000;
       box-shadow: 0px 14px 43px 6px #000000;
+      
+      +.album-disc{
+        transform: scale(0.9);
+        opacity: 0.8;
+      }
+      } 
+        
+  
+      
     }
 
-    .album-disc {
+    .album-disc:hover {
       transform: scale(0.9);
       opacity: 0.8;
     }
-  }
+
+    
+  
 }
 
 .span-2 {
@@ -101,6 +114,11 @@ img {
   height: auto;
 }
 
+@-moz-document url-prefix() {
+  .image-container{
+    display: flex;
+  }
+}
 
 .image-container {
   width: 100%;
@@ -152,24 +170,17 @@ img {
     }
   }
   h3 {
-   
+    opacity: 0;
     font-weight: 700;
     text-transform: uppercase;
     color: $primary-color;
     letter-spacing: 3px;
     font-size: #{"max(11vw, 5rem)"};
-    overflow: hidden;
-    margin-bottom: 1rem;
-    span{
-      display: inline-block;
-      
-    
-    }
   }
   @media (max-width: 556px) {
     h3,
     h4 {
-      line-height: 100%;
+      line-height: 94%;
     }
   }
   h4 {
@@ -178,7 +189,7 @@ img {
     letter-spacing: 2px;
     line-height: 45px;
     opacity: 0;
-    font-weight: normal;
+    font-weight: initial;
   }
 
   .intro-bg {

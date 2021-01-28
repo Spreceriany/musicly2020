@@ -52,7 +52,7 @@ $album-color: #cabc69;
     font-size: 4.2rem;
   }
 
-  h3 {
+  hh4 {
     color: $descp-color;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -101,6 +101,11 @@ img {
   height: auto;
 }
 
+@-moz-document url-prefix() {
+  .image-container{
+    display: flex;
+  }
+}
 
 .image-container {
   width: 100%;
@@ -152,33 +157,25 @@ img {
     }
   }
   h3 {
-   
+    opacity: 0;
     font-weight: 700;
     text-transform: uppercase;
     color: $primary-color;
     letter-spacing: 3px;
     font-size: #{"max(11vw, 5rem)"};
-    overflow: hidden;
-    margin-bottom: 1rem;
-    span{
-      display: inline-block;
-      
-    
-    }
   }
   @media (max-width: 556px) {
     h3,
-    h4 {
-      line-height: 100%;
+    p {
+      line-height: 94%;
     }
   }
-  h4 {
+  p {
     font-size: #{"max(5vw, 3rem)"};
     color: $descp-color;
     letter-spacing: 2px;
     line-height: 45px;
     opacity: 0;
-    font-weight: normal;
   }
 
   .intro-bg {

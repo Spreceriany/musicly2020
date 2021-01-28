@@ -33,9 +33,9 @@ ScrollTrigger.batch(".grid-item", {
 });
 
 timeline
-  .to("#intro-bg", { scale: 1, opacity: 1, duration: 1 })
-  .from("#title span", { y:"60vh", stagger:.8,duration:2,ease: "power2.out", skewY:10})
-  .to("#title-desc", { opacity: 1 },"-=.6");
+  .to("#intro-bg", { scale: 1, opacity: 1, duration: 1.5 })
+  .fromTo("#title span",{ skewY:10}, { opacity: 1, y:"0%", stagger:.3,duration:1,skewY:0})
+  .to("#title-desc", { opacity: 1 });
 
 
 

@@ -152,24 +152,18 @@ img {
     }
   }
   h3 {
-   
+    opacity: 0;
     font-weight: 700;
     text-transform: uppercase;
     color: $primary-color;
     letter-spacing: 3px;
     font-size: #{"max(11vw, 5rem)"};
-    overflow: hidden;
-    margin-bottom: 1rem;
-    span{
-      display: inline-block;
-      
-    
-    }
+    transform: translateY(100%);
   }
   @media (max-width: 556px) {
     h3,
     h4 {
-      line-height: 100%;
+      line-height: 94%;
     }
   }
   h4 {

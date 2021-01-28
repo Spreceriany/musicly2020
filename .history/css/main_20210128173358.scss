@@ -159,17 +159,17 @@ img {
     letter-spacing: 3px;
     font-size: #{"max(11vw, 5rem)"};
     overflow: hidden;
-    margin-bottom: 1rem;
+    
     span{
-      display: inline-block;
-      
+    
+      transform: translateY(110%);
     
     }
   }
   @media (max-width: 556px) {
     h3,
     h4 {
-      line-height: 100%;
+      line-height: 94%;
     }
   }
   h4 {
