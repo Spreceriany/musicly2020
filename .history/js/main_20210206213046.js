@@ -25,13 +25,13 @@ ScrollTrigger.batch(".grid-item", {
   
   onEnter: (batch) =>
     gsap
-    .fromTo(batch,{skewY:-1}, { autoAlpha: 1,
-      stagger: 0.2,
-      y:0,
-      skewY:0
-     
-    })
-   
+    .from(batch,{skewY:10})
+    .to(batch, 
+        { autoAlpha: 1,
+          stagger: 0.2,
+          y:0,
+         
+        }),
 //    onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, stagger: 0.2,y:-20 }),
 });
 

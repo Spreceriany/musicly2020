@@ -25,7 +25,7 @@ ScrollTrigger.batch(".grid-item", {
   
   onEnter: (batch) =>
     gsap
-    .fromTo(batch,{skewY:-1}, { autoAlpha: 1,
+    .fromTo(batch,{skewY:10}, { autoAlpha: 1,
       stagger: 0.2,
       y:0,
       skewY:0
