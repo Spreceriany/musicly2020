@@ -25,7 +25,7 @@ ScrollTrigger.batch(".grid-item", {
   
   onEnter: (batch) =>
     gsap.to(batch, 
-        { autoAlpha: 1,
+        { opacity: 1,
           stagger: 0.2,
           y:0
         }),
@@ -33,10 +33,10 @@ ScrollTrigger.batch(".grid-item", {
 });
 
 timeline
-  .to("#intro-bg", { scale: 1, autoAlpha: 1, duration: 1.7 },"+=1")
-  .from("#title span", { autoAlpha: 0 })
-  .from(".year", { y:"30vh", stagger:.8,duration:2,ease: "power2.out", skewY:20},"-=.7")
-  .to("#title-desc", { autoAlpha: 1 });
+  .to("#intro-bg", { scale: 1, opacity: 1, duration: 1.7 },"+=1")
+  .from("#title span", { opacity: 0 })
+  .from(".year", { y:"60vh", stagger:.8,duration:2,ease: "power2.out", skewY:20},"-=.7")
+  .to("#title-desc", { opacity: 1 },"-=.2");
 
 
 
