@@ -33,7 +33,6 @@ body {
   grid-auto-flow: dense;
   padding: 10px;
   max-width:1920px;
-  margin: auto;
   background-color: $background-color;
 }
 
@@ -145,7 +144,6 @@ img {
 
 .intro-wrapper {
   max-width:1920px;
-  margin: auto;
   min-height: 100vh;
   background-color: $background-color;
   display: grid;
@@ -164,7 +162,7 @@ img {
     text-transform: uppercase;
     color: $primary-color;
     letter-spacing: 3px;
-    font-size: #{"max(7vw, 5rem)"};
+    font-size: #{"max(11vw, 5rem)"};
     overflow: hidden;
     margin-bottom: 1rem;
     span{

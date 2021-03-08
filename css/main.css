@@ -16,6 +16,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-display: swap;
   scroll-behavior: smooth;
+  background: #021e73;
+  margin: auto;
 }
 
 .grid-layout {
@@ -27,6 +29,8 @@ body {
   grid-auto-rows: minmax(250px, auto);
   grid-auto-flow: dense;
   padding: 10px;
+  max-width: 1920px;
+  margin: auto;
   background-color: #021e73;
 }
 
@@ -164,7 +168,8 @@ img {
 }
 
 .intro-wrapper {
-  width: 100%;
+  max-width: 1920px;
+  margin: auto;
   min-height: 100vh;
   background-color: #021e73;
   display: -ms-grid;
@@ -186,7 +191,7 @@ img {
   text-transform: uppercase;
   color: #f2e52e;
   letter-spacing: 3px;
-  font-size: max(11vw, 5rem);
+  font-size: max(7vw, 5rem);
   overflow: hidden;
   margin-bottom: 1rem;
 }
