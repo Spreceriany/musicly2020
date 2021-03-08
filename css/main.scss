@@ -7,6 +7,12 @@
   padding: 0;
   margin: 0;
 }
+$primary-color: #f2e52e;
+$background-color: #021e73;
+$secondbg-color: #423dd9;
+$descp-color: #e9d249;
+$album-color: #cabc69;
+
 body {
   font-family: "GT Flexa", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,11 +22,7 @@ body {
   background:$background-color;
 }
 
-$primary-color: #f2e52e;
-$background-color: #021e73;
-$secondbg-color: #423dd9;
-$descp-color: #e9d249;
-$album-color: #cabc69;
+
 
 .grid-layout {
   display: grid;
