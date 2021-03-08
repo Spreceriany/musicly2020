@@ -13,6 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-display: swap;
   scroll-behavior: smooth;
+  background:$background-color;
 }
 
 $primary-color: #f2e52e;
@@ -28,6 +29,7 @@ $album-color: #cabc69;
   grid-auto-rows: minmax(250px, auto);
   grid-auto-flow: dense;
   padding: 10px;
+  max-width:1920px;
   background-color: $background-color;
 }
 
@@ -138,7 +140,7 @@ img {
 }
 
 .intro-wrapper {
-  width: 100%;
+  max-width:1920px;
   min-height: 100vh;
   background-color: $background-color;
   display: grid;
